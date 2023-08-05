@@ -3,6 +3,7 @@ import "./App.css";
 import { useState, useEffect } from "react";
 import TagButton from "./TagButton";
 import { img } from "../src/Image";
+import Navbar from "./Navbar";
 
 function App() {
   const [tag, setTag] = useState("render");
@@ -19,16 +20,16 @@ function App() {
   return (
     <>
       <div>
-        <div className="container">
+        <Navbar>
           <TagButton name="all" handlerSetTag={setTag}></TagButton>
           <TagButton name="3d" handlerSetTag={setTag}></TagButton>
           <TagButton name="design" handlerSetTag={setTag}></TagButton>
           <TagButton name="render" handlerSetTag={setTag}></TagButton>
-        </div>
+        </Navbar>
 
         {filteredImage.map((item) => (
-          <div key={item.id} className="image">
-            {item.tag}
+          <div key={item.id} className="image-container">
+            <img src={item.link} alt={item.tag} className="img" />
           </div>
         ))}
       </div>

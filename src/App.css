@@ -56,3 +56,30 @@
   gap: 6px;
   margin-bottom: 10px;
 }
+
+.navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 10px;
+  gap: 2px;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  background-color: aliceblue;
+}
+
+.image-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: aqua;
+}
+
+.img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
